@@ -1,0 +1,525 @@
+<html>
+<head>
+	<style>
+		/*  div[class]{color:red;}  */ 
+		/* div[id]{color:green;}  */
+		
+		div[id="dev1"]{color:red;}
+		div[id="data1"]{color:blue;}
+		
+		#AS1 [class~="game"]{color:red;}  /*we have use id as AS1 AS2 and so on because of some problem*/
+		
+		#AS2 [class|="game"]{color:blue;}
+		
+		#AS3 [class^="game"]{color:red;}
+		
+		#AS4 [class$="game"]{color:pink;}
+		
+		#AS5 [class*="ga"]{color:blue;}
+	
+		
+		#container{border:3px solid black; display:flex;} /* when display is flex then it by default in form of row . we can change the direction using flex-direction*/ 
+		#firstdiv {background-color:pink;}
+		#seconddiv {background-color:orange;}
+		#thirddiv {background-color:khaki;}
+		#fourthdiv {background-color:blue;}
+		#fifthdiv {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containera{border:3px solid black; display:flex; flex-direction:row-reverse;}/*we have change a direction*/  
+		#firstdiva {background-color:pink;}
+		#seconddiva {background-color:orange;}
+		#thirddiva {background-color:khaki;}
+		#fourthdiva {background-color:blue;}
+		#fifthdiva {background-color:red;}
+		.diva{margin:10px; text-align:center; padding:10px;}
+		
+		#containerb{border:3px solid black; display:flex; flex-direction:column;} /* we have change a direction as column */  
+		#firstdivb {background-color:pink;}
+		#seconddivb {background-color:orange;}
+		#thirddivb {background-color:khaki;}
+		#fourthdivb {background-color:blue;}
+		#fifthdivb {background-color:red;}
+		.divb{margin:10px; text-align:center; padding:10px;}
+		
+		#containerc{border:3px solid black; display:flex; flex-direction:column-reverse}  
+		#firstdivc {background-color:pink;}
+		#seconddivc {background-color:orange;}
+		#thirddivc {background-color:khaki;}
+		#fourthdivc {background-color:blue;}
+		#fifthdivc {background-color:red;}
+		.divc{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containerd{border:3px solid black; display:flex; justify-content:flex-end;}  
+		#firstdivd {background-color:pink;}
+		#seconddivd {background-color:orange;}
+		#thirddivd {background-color:khaki;}
+		#fourthdivd {background-color:blue;}
+		#fifthdivd {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containere{border:3px solid black; display:flex; justify-content:space-around;} 
+		#firstdive {background-color:pink;}
+		#seconddive {background-color:orange;}
+		#thirddive {background-color:khaki;}
+		#fourthdive {background-color:blue;}
+		#fifthdive {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containerf{border:3px solid black; height:300px; display:flex; justify-content:space-around; align-items:stretch;} 
+		#firstdivf {background-color:pink;}
+		#seconddivf {background-color:orange;}
+		#thirddivf {background-color:khaki;}
+		#fourthdivf {background-color:blue;}
+		#fifthdivf {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containerg{border:3px solid black; display:flex; height:300px; align-items:flex-end;} 
+		#firstdivg {background-color:pink;}
+		#seconddivg {background-color:orange;}
+		#thirddivg {background-color:khaki;}
+		#fourthdivg {background-color:blue;}
+		#fifthdivg {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containerh{border:3px solid black; display:flex;height:300px; justify-content:space-around; align-items:baseline;} /*we can see their base are same*/
+		#firstdivh {background-color:pink;}
+		#seconddivh {background-color:orange;}
+		#thirddivh {background-color:khaki;font-size:40px;}
+		#fourthdivh {background-color:blue;}
+		#fifthdivh {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containeri{border:3px solid black; display:flex; height:300px; justify-content:center; align-items:center;} 
+		#firstdivi {background-color:pink;}
+		#seconddivi {background-color:orange;}
+		#thirddivi {background-color:khaki;}
+		#fourthdivi {background-color:blue;}
+		#fifthdivi {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containerj{border:3px solid black;height:300px; display:flex;align-items:flex-start; flex-wrap:nowrap;} /* when the screen is shorter then the elements are not wrap */  
+		#firstdivj {background-color:pink;}
+		#seconddivj {background-color:orange;}
+		#thirddivj {background-color:khaki;}
+		#fourthdivj {background-color:blue;}
+		#fifthdivj {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containerk{border:3px solid black; display:flex; height:300px; align-items:flex-start; flex-wrap:wrap;} /* the screen will wrap when the screen is shorter */ 
+		#firstdivk {background-color:pink;}
+		#seconddivk {background-color:orange;}
+		#thirddivk {background-color:khaki;}
+		#fourthdivk {background-color:blue;}
+		#fifthdivk {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containerl{border:3px solid black; display:flex; align-content:center; flex-wrap:wrap;} /* it will center the flex lines when we wrap a screen on smaller size */  
+		#firstdivl {background-color:pink;}
+		#seconddivl {background-color:orange;}
+		#thirddivl {background-color:khaki;}
+		#fourthdivl {background-color:blue;}
+		#fifthdivl {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;height:30px;}
+		
+		#containerm{border:3px solid black; display:flex; align-content:space-around; flex-wrap:wrap;} /* it will create proper space between the flex lines and it is good enough to align-items of space-around */ 
+		#firstdivm {background-color:pink;}
+		#seconddivm {background-color:orange;}
+		#thirddivm{background-color:khaki;}
+		#fourthdivm {background-color:blue;}
+		#fifthdivm {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containern{border:3px solid black; display:flex;}  
+		#firstdivn{background-color:pink;}
+		#seconddivn {background-color:orange;}
+		#thirddivn {background-color:khaki;}
+		#fourthdivn {background-color:blue;}
+		#fifthdivn {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containero{border:3px solid black; display:flex;} 
+		#firstdivo {background-color:pink;order:2;}
+		#seconddivo {background-color:orange; order:-1;}
+		#thirddivo {background-color:khaki;order:1;}
+		#fourthdivo {background-color:blue;order:3;}
+		#fifthdivo {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containerp{border:3px solid black;height:300px; display:flex; align-items:flex-end;}  
+		#firstdivp{background-color:pink;}
+		#seconddivp {background-color:orange;}
+		#thirddivp {background-color:khaki; align-self:flex-start;}
+		#fourthdivp {background-color:blue;}
+		#fifthdivp {background-color:red; align-self:center;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		
+		#containerq{border:3px solid black; display:flex; width:500px;} 
+		#firstdivq {background-color:pink;}
+		#seconddivq {background-color:orange; flex-grow:1;}
+		#thirddivq {background-color:khaki;}
+		#fourthdivq {background-color:blue; flex-grow:2;}
+		#fifthdivq {background-color:red;}
+		.div{margin:10px; text-align:center; padding:10px;}
+		
+		#containerr{border:3px solid black; display:flex;} 
+		#firstdivr {background-color:pink;}
+		#seconddivr {background-color:orange;}
+		#thirddivr {background-color:khaki; flex-grow:2;}
+		#fourthdivr {background-color:blue;}
+		#fifthdivr {background-color:red;}
+		.divr{margin:10px; text-align:center; padding:10px; flex-grow:1;}
+		
+		
+		#containers{border:3px solid black; display:flex; height:300px; width:500px; align-items:flex-start;} 
+		#firstdivs {background-color:pink;}
+		#seconddivs {background-color:orange; flex-shrink:2;}
+		#thirddivs {background-color:khaki; }
+		#fourthdivs {background-color:blue;}
+		#fifthdivs {background-color:red;}
+		.divs{margin:10px; text-align:center; padding:10px; width:100px;}
+		
+		
+		
+	</style>
+<body>
+<!--ATTRIBUTE SELECTOR-->
+
+<!--set style using attribute-->
+<div class="data">bhargav</div>
+<div id="dev">bhargav</div>
+<br>
+<br>
+
+<!--set style using attributes and it's value-->
+<div id="data1">bhargav</div>
+<div id="dev1">bhargav</div>
+<br>
+<br>
+
+<!--set style using an attribute value containing a specified word-->
+<div id="AS1">
+	<div class="game">game</div>
+	<div class="supergame">supergame</div>
+	<div class="gamesuper">gamesuper</div>
+	<div class="game-super">game-super</div>
+	<div class="super-game">super-game</div>
+	<div class="game super">game super</div>
+	<div class="super game">super game</div>
+</div>
+<br>
+<br>
+
+<!--set style using with the specified attribute starting with the specified value-->
+<!--the value must be the whole word ex: game, game-super-->
+<div id="AS2">
+	<div class="game">game</div>
+	<div class="supergame">supergame</div>
+	<div class="gamesuper">gamesuper</div>
+	<div class="game-super">game-super</div>
+	<div class="super-game">super-game</div>
+	<div class="game super">game super</div>
+	<div class="super game">super game</div>
+</div>
+<br>
+<br>
+
+<!--set style whose attribute value begins with a specified value-->
+<!--it is not necessory that value should be a whole word-->
+<div id="AS3">
+	<div class="game">game</div>
+	<div class="supergame">supergame</div>
+	<div class="gamesuper">gamesuper</div>
+	<div class="game-super">game-super</div>
+	<div class="super-game">super-game</div>
+	<div class="game super">game super</div>
+	<div class="super game">super game</div>
+</div>
+<br>
+<br>
+
+<!--set style whose attribute end with a specified value-->
+<!--it is not necessory that value should be a whole word-->
+<div id="AS4">
+	<div class="game">game</div>
+	<div class="supergame">supergame</div>
+	<div class="gamesuper">gamesuper</div>
+	<div class="game-super">game-super</div>
+	<div class="super-game">super-game</div>
+	<div class="game super">game super</div>
+	<div class="super game">super game</div>
+</div>
+<br>
+<br>
+
+<!--set style whose attribute contain a specified value-->
+<div id="AS5">
+	<div class="game">game</div>
+	<div class="supergame">supergame</div>
+	<div class="gamesuper">gamesuper</div>
+	<div class="game-super">game-super</div>
+	<div class="super-game">super-game</div>
+	<div class="game super">game super</div>
+	<div class="super game">super game</div>
+	<div class="super">super</div>
+</div>
+<br>
+<br>
+
+<!--flex-direction-->
+<!--this property is use to set a direction of flexible item-->
+<!--values are row(default), row-reverse, column, column-reverse-->
+
+
+<div id="container">
+	<div id="firstdiv" class="div">1</div>
+	<div id="seconddiv" class="div">2</div>
+	<div id="thirddiv" class="div">3</div>
+	<div id="fourthdiv" class="div">4</div>
+	<div id="fifthdiv" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containera">
+	<div id="firstdiva" class="diva">1</div>
+	<div id="seconddiva" class="diva">2</div>
+	<div id="thirddiva" class="diva">3</div>
+	<div id="fourthdiva" class="diva">4</div>
+	<div id="fifthdiva" class="diva">5</div>
+</div>
+<br>
+<br>
+
+<div id="containerb">
+	<div id="firstdivb" class="divb">1</div>
+	<div id="seconddivb" class="divb">2</div>
+	<div id="thirddivb" class="divb">3</div>
+	<div id="fourthdivb" class="divb">4</div>
+	<div id="fifthdivb" class="divb">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containerc">
+	<div id="firstdivc" class="divc">1</div>
+	<div id="seconddivc" class="divc">2</div>
+	<div id="thirddivc" class="divc">3</div>
+	<div id="fourthdivc" class="divc">4</div>
+	<div id="fifthdivc" class="divc">5</div>
+</div>
+<br>
+<Br>
+
+<!--justify-content-->
+<!--this is use to align the flexibles container item-->
+<!--work on main-axis(horizontally)-->
+<!--flex-start(default), flex-end, center, space-between, space-around -->
+
+<div id="containerd">
+	<div id="firstdivd" class="div">1</div>
+	<div id="seconddivd" class="div">2</div>
+	<div id="thirddivd" class="div">3</div>
+	<div id="fourthdivd" class="div">4</div>
+	<div id="fifthdivd" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containere">
+	<div id="firstdive" class="div">1</div>
+	<div id="seconddive" class="div">2</div>
+	<div id="thirddive" class="div">3</div>
+	<div id="fourthdive" class="div">4</div>
+	<div id="fifthdive" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<!--allign-items-->
+<!--this property is use to default allignment for items inside the container-->
+<!--it only work in vertically-->
+<!--values are stretch(default), center, flex-start, flex-end, baseline--> 
+
+<div id="containerf">
+	<div id="firstdivf" class="div">1</div>
+	<div id="seconddivf" class="div">2</div>
+	<div id="thirddivf" class="div">3</div>
+	<div id="fourthdivf" class="div">4</div>
+	<div id="fifthdivf" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containerg">
+	<div id="firstdivg" class="div">1</div>
+	<div id="seconddivg" class="div">2</div>
+	<div id="thirddivg" class="div">3</div>
+	<div id="fourthdivg" class="div">4</div>
+	<div id="fifthdivg" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containerh">
+	<div id="firstdivh" class="div"><u>1</u></div>
+	<div id="seconddivh" class="div"><u>2</u></div>
+	<div id="thirddivh" class="div"><u>3</u></div>
+	<div id="fourthdivh" class="div"><u>4</u></div>
+	<div id="fifthdivh" class="div"><u>5</u></div>
+</div>
+<br>
+<Br>
+
+
+<div id="containeri">
+	<div id="firstdivi" class="div">1</div>
+	<div id="seconddivi" class="div">2</div>
+	<div id="thirddivi" class="div">3</div>
+	<div id="fourthdivi" class="div">4</div>
+	<div id="fifthdivi" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<!--flex-wrap-->
+<!--this property is use to whether the flexible item should wrap or not-->
+<!--values are nowrap(default), wrap, and wrap-reverse -->
+
+<div id="containerj">
+	<div id="firstdivj" class="div">1</div>
+	<div id="seconddivj" class="div">2</div>
+	<div id="thirddivj" class="div">3</div>
+	<div id="fourthdivj" class="div">4</div>
+	<div id="fifthdivj" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containerk">
+	<div id="firstdivk" class="div">1</div>
+	<div id="seconddivk" class="div">2</div>
+	<div id="thirddivk" class="div">3</div>
+	<div id="fourthdivk" class="div">4</div>
+	<div id="fifthdivk" class="div">5</div>
+</div>
+<br>
+<Br>
+
+
+<!--align-content-->
+<!--it is similiar to align-items, but instead of aligning flex items , it align flex lines-->
+<!--values are stretch(default), flex-end, flex-start, center , space-between, space-around -->
+<div id="containerl">
+	<div id="firstdivl" class="div">1</div>
+	<div id="seconddivl" class="div">2</div>
+	<div id="thirddivl" class="div">3</div>
+	<div id="fourthdivl" class="div">4</div>
+	<div id="fifthdivl" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containerm">
+	<div id="firstdivm" class="div">1</div>
+	<div id="seconddivm" class="div">2</div>
+	<div id="thirddivm" class="div">3</div>
+	<div id="fourthdivm" class="div">4</div>
+	<div id="fifthdivm" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<!-- ORDER -->
+<!--this property is use to specify the order of flexible item-->
+<div id="containern">
+	<div id="firstdivn" class="div">about us</div>
+	<div id="seconddivn" class="div">home</div>
+	<div id="thirddivn" class="div">contact us</div>
+	<div id="fourthdivn" class="div">help</div>
+	<div id="fifthdivn" class="div">menu</div>
+</div>
+<br>
+<Br>
+
+<div id="containero"> <!--now we can change them in a order-->
+	<div id="firstdivo" class="div">about us</div>
+	<div id="seconddivo" class="div">home</div>
+	<div id="thirddivo" class="div">contact us</div>
+	<div id="fourthdivo" class="div">help</div>
+	<div id="fifthdiv" class="div">menu</div>
+</div>
+<br>
+<Br>
+
+<!-- align-self -->
+<!--this property is used to specify the allignmrnt of specific item -->
+<!-- values are auto(default), flex-start, flex-end, center, stretch, baseline -->
+<div id="containerp">
+	<div id="firstdivp" class="div">1</div>
+	<div id="seconddivp" class="div">2</div>
+	<div id="thirddivp" class="div">3</div>
+	<div id="fourthdivp" class="div">4</div>
+	<div id="fifthdivp" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<!-- FLEX-GROW -->
+<!--this property is use to specify how much item is grow relative to the rest of the flexible item -->
+<div id="containerq">
+	<div id="firstdivq" class="div">1</div>
+	<div id="seconddivq" class="div">2</div>
+	<div id="thirddivq" class="div">3</div>
+	<div id="fourthdivq" class="div">4</div>
+	<div id="fifthdivq" class="div">5</div>
+</div>
+<br>
+<Br>
+
+<div id="containerr">
+	<div id="firstdivr" class="divr">1</div>
+	<div id="seconddivr" class="divr">2</div>
+	<div id="thirddivr" class="divr">3</div>
+	<div id="fourthdivr" class="divr">4</div>
+	<div id="fifthdivr" class="divr">5</div>
+</div>
+<br>
+<Br>
+
+<!-- FLEX-SHRINK-->
+<!--this property is use to specify how much item is shrink relative to the rest of the flexible item -->
+<div id="containers">
+	<div id="firstdivs" class="divs">1</div>
+	<div id="seconddivs" class="divs">2</div> <!--flex-shrink:1 (default) when we give 2 as a value it will 1st shrink because of the adjustment-->
+	<div id="thirddivs" class="divs">3</div>
+	<div id="fourthdivs" class="divs">4</div>
+	<div id="fifthdivs" class="divs">5</div>
+</div>
+<br>
+<Br>
+
+<!--FLEX -->
+<!--this is a shorthand -->
+<!--syntax is flex: flex-grew flex-shrink flex-basis -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</head>
+</html> 

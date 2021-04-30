@@ -1,0 +1,12 @@
+p{color:red;font-size:20px;}
+h1{color:blue;font-size:4em;}
+#bhargav1{color:red;font-size:60px;}
+.bs1{color:pink;font-size:30px;}
+p.bs2{color:blue;font-size:60px;}
+p{background-color:pink;}
+h5{background-image:url(image/green.jpg);}	
+body{background-image:url(image/car.jpg),url(image/dog.jpg);	/*we can gice multiple background image*/
+	background-position:right top,left top;
+	background-repeat:no-repeat,no-repeat;
+	background-attachment:fixed,fixed;/* background attachment is attached the image when we scroll, image position never be change*/}
+<!--we can also write shorter way of background as (( body{ background:url(image/car.jpg) right top no-repeat fixed,url(image/dog.jpg left top no-repeat fixed;}))-->

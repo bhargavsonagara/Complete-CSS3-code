@@ -1,0 +1,910 @@
+<html>
+<head>
+<style>
+	#div #bhar{color:red;}
+	#div{color:green;}
+	#maindiv{border:3px solid brown; width:500px;}
+	#maindiv #childdiv p{color:green;}
+	#maindiv #childdiv .sdiv .shorter{color:blue;}
+	/*      *{color:red;}    * is a universal selector it has a greator priority and it also affect the link. it colour all the element  */
+	
+	#maindiv > p{color:pink;} /* > is a child selector it affect on the direct child ex #maindiv have two para as a child so it color them */
+	
+	#maindiv p + h1{color:grey;} /* + is adjacent selector which work on adjacent side*/
+	
+	#maindiv p ~ h1{background-color:yellow;} /* ~ sibling selector it work on sibling element ex: p has two sibling h1 sibling means each element has same parents*/ 
+	
+	#div1 p:first-child{color:red;}/* first-child: this will set the css rule to every first element of selector which is someones child. ex of pseudo class*/
+	#div1 p:last-child{color:blue;}/*last-child:  this will set the css rule to every last element of selector which is someones child* ex of pseudo class*/
+	#div2 p:first-of-type{color:red;}/*this will set css rule to first selector type of element */
+	#div2 p:last-of-type{color:blue;}/*this will set css rule to last selector type of element */
+	
+	#ul1 li:nth-child(1){color:red;} /* when we have nth child */
+	#ul1 li:nth-child(5),li:nth-child(8){color:red;} /*we can give 2 chilkd also by seperated by coma*/
+	#ul2 li:nth-child(even){color:blue;}
+	#ul2 li:nth-child(odd){color:green;}
+	#ul3 li:nth-child(3n+2){color:grey;}
+	
+	#div3 p::before{content:"bhargav ji ";} /*this is a pseudo element known by (::)*/
+	#div3 p::after{content:"good by.";}
+	#div4 p::before{content:open-quote;}
+	#div4 p::after{content:close-quote;}
+	#div5 p::before{content:url(image/car.jpg);}
+	
+	#span h1::first-letter{color:red;} /* this is use to add a style to first letter of the specified selecter each.it only apply on block level element */
+	#span1 p::first-line{color:blue;} /* this is use to add a style to first line of block level element*/ 
+	::selection{color:white; background-color:red;} /* when we select smthing in browser it shows effect on it*/
+	#span2 p::before{content:" hii guyz "; color:green;} /* this is use to insert smthing before the content of each specified selector */
+	#span2 p::after{content:" thank you "; color: blue;} /* this is use to insert smthing after the content of each specified selector */
+	
+	#div6 {background-color:grey; margin-left:100px; margin-right:100px; margin-bottom:100px; margin-top:100px;} /* margin is use to set a margin of specified element */
+	#div7 {background-color:khaki; margin: 70px 70px 70px 70px;}
+	#p1 {background-color:pink;  margin: 130px ;}
+
+	#div8 {background-color:green; padding:20px 30px 40px 50px;} /* padding */
+	
+	#div9 {background-color:blue; height:50px; width:79px;}
+	#div9:hover{ opacity:0.2;} /* we use psudo class hover  when cursor move to div its hover */
+	
+	#img1:hover{ border-radius:50%;}
+	
+	#img2:hover{ box-shadow:20px 20px 20px 10px grey;}
+	
+	#div10 {background-color:blue; width:100; height:100; 
+			transition-property:all; transition-duration:2s; transition-delay:700ms; transition-timing-function:linear;} /* for more effect reach website cubic-bezier.com*/
+	#div10:hover{background-color:green; width:400; height:200;}
+	#div11 {background-color:red; width:100; height:100; 
+			transition:all 2s cubic-bezier(.17,.67,1,-0.06) 2ms;} /* transition-property applied on all */
+	#div11:hover{background-color:khaki; width:400; height:200;}	
+	#div12 {background-color:pink; width:100; height:100; 
+			transition:width 2s cubic-bezier(.17,.67,1,-0.06) 2ms , height 2s cubic-bezier(.02,.23,1,-0.5) 2ms;} /* transition-property applied on height and width */
+	#div12:hover{background-color:khaki; width:400; height:200;}
+	
+	#hh{color:red;font-size:50px;}
+	#hh:hover{color:blue;font-family:arial;font-size:100px;
+				 transition: all 3s cubic-bezier(.01,.39,.92,1.48);}
+	
+				 
+				 
+				 
+	
+	
+	
+	
+</style>
+<body>
+<img src="image/car.jpg" style="float:left; margin-right:10px;"></img><!--the element should be placed along the left or right side of its container, where the text and inline element wrap around it values are left right none(default)--> 
+<h3>hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+ 	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+</h3>
+
+<p style="clear:left;">  <!--these property is used to specify whether an element can be next to floating element that precede it or must be down(cleared) below them . its property are left right both none(default)--> 
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav]
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+</p>
+<br>
+<br>
+<br>
+<Br>
+<img src="image/car.jpg" style="float:left; margin-right:10px;"></img> 
+<img src="image/cat.jpg" style="float:right; margin-bottom:10px;"></img> 
+<h3>hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+ 	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+</h3>
+
+<p style="clear:both;"> <!--clear value both is use when we try to put our text below the both the image-->
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav]
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+</p>
+		
+<!--div tag is used to group various other HTML element s. it is a block level element . we can say it create a block-->
+<!--span tag is a grop inline element . it is a inline element-->
+
+<div style="background-color:khaki; color:red;">
+<h1> bhargav sonagara</h1>
+<p> hii, my name is bhargav. hii, my name is bhargav. hii, my name is bhargav.
+	hii, my name is bhargav. hii, my name is bhargav. <span style="color:green;">hii, my name is bhargav.</span>
+</p>
+</div>
+
+<div id="div"> <!--used as internal style sheet-->
+<p id="bhar"> hii, my name is bhargav</p>
+<p>hello guyz</p>
+<p> hii hello kem cho </p>
+</div>
+
+
+<div id="maindiv" >
+	<p class="parent para">parent pragraph 1</p>
+	<h1>parent heading 1</h1>
+		<div id="childdiv">
+			<p>child paragraph 1</p>
+				<div class="sdiv">
+					<p class="shorter">  tooo small para</p>
+					<p>  tooo very small para</p>
+					
+				</div>
+			<p>child paragraph 2</p>
+			<h1>child heading 1</h1>
+		</div>
+	<h1>parent heading 2</h1>
+	<p>parent paragraph 2</p>
+</div>
+
+<!-- main point priority 1:ID 2:class 3:element -->
+
+
+<!--pseudo class is used to define a special state of an element -->
+<!--syntax:  selector:pseudo-class{property:value;}-->
+<div id="div1">
+	<div>
+		<p>this is 1st child of 1st div</p>
+		<p>this is paragraph</p>
+		<p>this is last child of 1st div</p>
+	</div>
+	<hr>
+	<div>
+		<p>this is 1st child of 2nd div</p>
+		<p>this is paragraph</p>
+		<p>this is last child of 2nd div</p>
+	</div>
+	<hr>
+	<div>
+		<p>this is 1st child of 3rd div</p>
+		<p>this is paragraph</p>
+		<p>this is last child of 3rd div</p>
+	</div>
+	<hr>
+</div>
+
+<div id="div2">
+	<div>
+		<h1>this is a 1st child of div but its a heading not p</h1>
+		<p>this is 1st child of 1st div</p>
+		<p>this is paragraph</p>
+		<p>this is last child of 1st div</p>
+		<h1>this is a last child of div but its a heading not p</h1>
+	</div>
+	<hr>
+	<div>
+		<p>this is 1st child of 2nd div</p>
+		<p>this is paragraph</p>
+		<p>this is last child of 2nd div</p>
+	</div>
+	<hr>
+	<div>
+		<p>this is 1st child of 3rd div</p>
+		<p>this is paragraph</p>
+		<p>this is last child of 3rd div</p>
+	</div>
+	<hr>
+</div>
+
+<ul id="ul1">
+	<li> this is list 1</li>
+	<li> this is list 2</li>
+	<li> this is list 3</li>
+	<li> this is list 4</li>
+	<li> this is list 5</li>
+	<li> this is list 6</li>
+	<li> this is list 7</li>
+	<li> this is list 8</li>
+	<li> this is list 9</li>
+</ul>
+<ul id="ul2">
+	<li> this is list 1</li>
+	<li> this is list 2</li>
+	<li> this is list 3</li>
+	<li> this is list 4</li>
+	<li> this is list 5</li>
+	<li> this is list 6</li>
+	<li> this is list 7</li>
+	<li> this is list 8</li>
+	<li> this is list 9</li>
+</ul>
+<ul id="ul3">
+	<li> this is list 1</li>
+	<li> this is list 2</li>
+	<li> this is list 3</li>
+	<li> this is list 4</li>
+	<li> this is list 5</li>
+	<li> this is list 6</li>
+	<li> this is list 7</li>
+	<li> this is list 8</li>
+	<li> this is list 9</li>
+</ul>
+
+<!--content : it is use to generate a content at a run time dynamically with the ::before and ::after pseudo-element to generate new content-->
+<div id="div3">
+	<p>hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara </p>
+	<p>hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara </p>
+	<h1>bhargav</h1>
+</div>
+
+<div id="div4">
+	<p>hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara </p>
+	<p>hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara </p>
+	<h1>bhargav</h1>
+</div>
+
+<div id="div5">
+	<p>hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara </p>
+	<p>hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara hi my name is bhargav sonagara </p>
+	<h1>bhargav</h1>
+</div>
+
+<span id="span">
+	<h1> bhargav sonagara hai mera naam</h1>
+	<h1> hii bhargav sonagara hai mera naam</h1>
+	<h1> hello bhargav sonagara hai mera naam</h1>
+</span>
+
+<span id="span1">
+	<p>hii my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		hii my name is bhargav sonagara. hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		hii my name is bhargav sonagara. hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+	<p>hii my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		hii my name is bhargav sonagara. hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		hii my name is bhargav sonagara. hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</span>
+
+<span id="span2">
+	<p>my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.</p>
+	<p>my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.</p>
+</span>
+<hr>
+<div id="div6">
+	<p>my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<hr>
+<div id="div7">
+	<p id="p1">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<hr>
+
+<div id="div8">
+	<p> my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<br>
+<br>
+
+<div style="background-color:grey; width:400px; height:100px; margin-left:70px; float:left; padding-left:30px;">
+	<h1>BHARGAV</h1>
+</div>
+<div style="background-color:pink; width:400px; height:100px; margin-left:70px; float:left; padding-left:30px;">
+	<h1>SONAGARA</h1>
+</div>
+<br>
+<br>
+<br>
+<div style="clear:left; margin-top:100px; max-width:100px; background-color:skyblue;">
+	<p> my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<div style="min-width:100px; background-color:skyblue;">
+	<p> my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<br>
+<br>
+<div style="min-height:100px; background-color:khaki;">
+	<p> my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<div style="max-height:100px; background-color:khaki;">
+	<p> my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+	</p>
+</div>
+<br>
+<br>
+<br>
+
+<img src="image/cat.jpg" style="opacity:0.2;"></img>  <!--opacity increase or decrease the transparency and the value upto 0.0 to 1.0-->
+<br>
+<br>
+
+<div id="div9">   <!--example of opacity with pseudo class hover on internal style sheet-->
+</div>
+
+<div style="height:300px; width:300px; background-color:rgba(192,192,64,0.2);"> <!--we can give opacity only for background using rba-->
+	<p> hii, my name is bhargav sonagara hii, my name is bhargav sonagara hii, my name is bhargav sonagara
+		hii, my name is bhargav sonagarahii, my name is bhargav sonagara  hii, my name is bhargav sonagara
+	</p>
+</div>
+<br>
+<br>
+
+<!--study on border-left-->
+<div style="border-left-style:groove;">
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-left-style:groove; border-left-width:thick;"> <!--for border-left-width values are thin,thick,medium,length and we can give px also-->
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-left-style:groove; border-left-color:red;"> <!--we give color vajue are any colour,transparent -->
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-left:2px groove blue;"> <!--we can use shorthand also border-left:border-left-width border-left-style border-left-color-->
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-right-style:double;"> <!-- see for border-right-style  values are solid, dotted,dashed,double,groove,ridge,inset,outset-->
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-right-style:groove; border-right-width:thick;">
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-right-style:groove; border-right-width:5px; border-right-color:blue;">
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-right:7px ridge green;">
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-top-style:inset;"> <!--now for border-top-style-->
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-top-style:inset; border-top-width:length;"> 
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-top-style:outset; border-top-width:5px; border-top-color:blue;"> 
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-top:4px dashed pink;"> 
+	<h2>bhargav</h2>
+</div>
+<br>
+
+
+<div style="border-bottom-style:inset;"> <!--now for border-bottom-style-->
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-bottom-style:inset; border-top-width:length;"> 
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-bottom-style:outset; border-top-width:5px; border-top-color:blue;"> 
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<div style="border-bottom:4px dashed pink;"> 
+	<h2>bhargav</h2>
+</div>
+<br>
+
+<!--study for border radius-->
+<div style="border:3px solid blue; border-top-left-radius:10px 20px;  /*10px for horizontal and 20px for vertical*/
+			border-bottom-right-radius:10px 20px;
+			border-top-right-radius:10px 20px;
+			border-bottom-left-radius:10px 20px;">
+	<p>hii, my name is bhargav </p>
+</div>
+<br>
+<br>
+
+<div style="border:3px solid green; border-radius:10px 20px 30px 40px/10px 20px 30px 40px;"> <!--we can give shortand as border-radius and 10px top left, 20px bottom right, 30px top right, 40px bottom left-->
+	<p>hii, my name is bhargav</p>
+</div>
+<br>
+<br>
+
+<img src="image/cat.jpg" style="height:100px; width:200px; border-radius:10px / 20px;"> <!--we can also make a radius of image-->
+<br>
+<br>
+<img src="image/cat.jpg" id="img1"> <!-- it show hower effect apply in internal style sheet-->
+<br>
+<br>
+<br>
+
+<!--now we study about box-shadow-->
+<!--it is allow to add one or more shadow to an element-->
+<!--syntax is box-shadow: h-shadow v-shadow blur spread color inset--> 
+<!--h-shadow and v-shadow is mendetory-->
+
+<div style="background-color:grey; height:200px; width:300px;
+			box-shadow:20px 20px 10px 10px blue inset;"><!--it is by default outset-->
+</div>
+<br>
+<br>
+
+<div style="background-color:grey; height:200px; width:300px;
+			box-shadow:20px 20px 10px 10px blue;">
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div style="background-color:khaki; height:200px; width:300px;
+			box-shadow:10px 10px 20px blue, 20px 20px 10px 10px red;"> <!--we can give two or more shadow seperted by coma-->
+</div>
+
+<br>
+<br>
+<br>
+
+<img src="image/cat.jpg" style="height:200px; width:200px;
+								box-shadow:16px 17px 20px grey;">
+
+<br>
+<br>
+<br>
+<img id="img2" src="image/cat.jpg" style="height:200px; width:200px;
+								border:5px solid grey;">		<!--we use hover effect as internal style sheet-->
+<br>
+<br>
+
+<!-- TRANSITION-->
+<!--transition is use to change property values from one value to another, over a given duration-->
+<!--values we use transition-timing-function, transition-property, transition-duration, transition-delay, transition-->
+<!--tarnsition-property it specify the name of a CSS property the transition effect is for and values are none,all, other css property-->
+<!--transition-duration it specify how many seconds or milliseconds transition effect take to complete -->
+<!--transition-timing-function is specify the speed curve of the transition effect and properties are ease,linear, ease-in, ease-out, ease-in-out,cubic-bezier(n,n,n,n)etc.-->
+<!--transition-delay it specify when the transition effect will start--> 
+<!--transition is a shorthand use as a transition: transition-property transition-duration transition-timing-function transition-delay-->
+
+<div id="div10">
+</div>
+
+<div id="div11">
+</div>
+
+<div id="div12">
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1 id="hh"> BHARGAV </h1>
+<br>
+<br>
+<br>
+
+<!--cursor  values are default, none, not-allowed, text, alias, pointer, progress, zoom-out, zoom-in, wait, no-drop, help ,move etc--> 
+<div style="background-color:pink;height:100px; width:200px; cursor:zoom-in;">
+</div>
+<br>
+
+<div style="background-color:pink;height:100px; width:200px; cursor:zoom-out;">
+</div>
+<br>
+
+<div style="background-color:pink;height:100px; width:200px; cursor:alias;">
+</div>
+<br>
+
+<div style="background-color:pink;height:100px; width:200px; cursor:pointer;">
+</div>
+<br>
+
+<div style="background-color:pink;height:100px; width:200px; cursor:wait;">
+</div>
+<br>
+<br>
+
+<!--text decoration-->
+<!-- values are text-decoration-line, text-decoration-style, text-decoration-color, text-decoration-->
+<!--text-decoration shorthand syntax is text-decoration:text-decoration-line text-decoration-style text-decoration-color-->
+
+<!--text-decoration-line values are none, underline , overline, line-through-->
+<h1 style="text-decoration-line:underline;"> BHARGAV SONAGARA</h1>
+<h1 style="text-decoration-line:overline;"> BHARGAV SONAGARA</h1>
+<h1 style="text-decoration-line:line-through;"> BHARGAV SONAGARA</h1>
+<h1 style="text-decoration-line:none;"> BHARGAV SONAGARA</h1>
+<h1 style="text-decoration-line:underline overline line-through;"> BHARGAV SONAGARA</h1>
+<a href="#" style="text-decoration-line:none;"> BHARGAV SONAGARA</a> <!--we can also remove a anchor tag underline-->
+
+<!--text-decoration-style values are solid, double, dotted, dashed, wavy-->
+<h1 style="text-decoration-line:underline; text-decoration-style:wavy"> BHARGAV SONAGARA</h1> <!--text-decoration-line is mendetory-->
+
+<!--text-decoration-color -->
+<h1 style="text-decoration-line:underline; text-decoration-color:red;"> BHARGAV SONAGARA</h1>
+
+<!--text-decoration as a shorthand-->
+<h1 style="text-decoration:underline dashed green;"> BHARGAV SONAGARA</h1>
+
+<!--OUTLINE-->
+<!--outline is always outside the border-->
+<!--values are outline-color, outline-style, outline-width, outline-->
+<!--outline use as a shorthand outline: outline-color outline-style outline-width; -->
+
+<!--outline-style values are solid, dashed, dotted, double, hidden, groove, inset, outset , ridge-->
+<h1 style="outline-style:outset;">BHARGAV SONAGARA</h1>
+
+<!--outline-width values are thick, thin or any length-->
+<h1 style="outline-style:outset; outline-width:2px;">BHARGAV SONAGARA</h1>
+<h1 style="outline-style:outset; outline-width:thick;">BHARGAV SONAGARA</h1>
+
+<!--outline-color values invert or any colour-->
+<h1 style="outline-style:outset;outline-color:red;">BHARGAV SONAGARA</h1>
+
+<!--outline use as a shorthand-->
+<h1 style="outline:green inset 5px;">BHARGAV SONAGARA</h1> 
+<br>
+<br>
+<br>
+
+<!--outline-offset it create a space between outline and border-->
+<h1 style="outline:red dashed 3px; border: 2px solid green; outline-offset:10px;">BHARGAV SONAGARA</h1> 
+<br>
+<Br>
+<Br>
+
+<!--COLUMNS-->
+<!--it divides a text into columns-->
+<!--values are column-count, column-width, columns-->
+
+<!--column-count -->
+<div style="column-count:3;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+
+<br>
+<br>
+<br>
+<!--column-width -->
+<div style="column-count:3; column-width:500px">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+<div style="column-width:100px;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+<!--columns use as shorthand columns:column-width column-count -->
+<div style="columns:500px 3;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<Br>
+<br>
+
+<!--COLUMN-RULE-STYLE-->
+<!--values are column-rule-style, column-rule-color, column-rule-width, column-rule-->
+
+<!--column-rule-style values are dashed, double, dotted, solid etc-->
+<div style="columns:3; column-rule-style:dashed;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+
+<!--column-rule-width values are in px,em,cm etc-->
+<div style="columns:4; column-rule-style:double; column-rule-width:5px;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+<!--column-rule-color-->
+<div style="columns:5; column-rule-style:solid;column-rule-color:green;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+
+<!--column-rule use as a shorthand syntax is cplumn-rule: column-rule-width column-rule-style column-rule-color;-->
+<div style="columns:3; column-rule:10px dotted red;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+
+<!--COLUMN-GAP-->
+<!--it create a gap between a columns-->
+<div style="columns:3; column-gap:200px;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+
+<div style="columns:4; column-rule:10px solid green;column-gap:100px;">my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+
+<div style="columns:4;">
+		<p style="column-span:all">hello everyone kese ho guyz</p> <!--column-span is use to how many column an element should span across-->
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+		my name is bhargav sonagara.hii my name is bhargav sonagara. hii my name is bhargav sonagara.
+</div>
+<br>
+<br>
+<br>
+
+<!--FILTER-->
+<!--this property is use to define a visual effect and brightness to an element-->
+<!--values are as folows-->
+<img src="image/car.jpg">
+<br>
+<br>
+
+<!-- blur(px)-->
+<img src="image/car.jpg" style="filter:blur(20px);">
+<br>
+<br>
+
+<!--brightness(%)-->
+<img src="image/car.jpg" style="filter:brightness(150%);">
+<br>
+<br>
+
+<img src="image/car.jpg" style="filter:brightness(45%);">
+<br>
+<br>
+
+<!--contrast(%)-->
+<img src="image/car.jpg" style="filter:contrast(200%);">
+<br>
+<br>
+
+<img src="image/car.jpg" style="filter:contrast(45%);">
+<br>
+<br>
+<br>
+
+<!--drop-shadow(h-shadow v-shadow blur spread color)-->
+<img src="image/car.jpg" style="filter:drop-shadow(10px 10px 20px green);">
+<br>
+<br>
+
+<!--grayscale(%)-->
+<img src="image/car.jpg" style="filter:grayscale(200%);">
+<br>
+<br>
+
+<!--hue-rotate(deg)-->
+<img src="image/car.jpg" style="filter:hue-rotate(50deg);">
+<br>
+<br>
+
+<!--invert(%)-->
+<img src="image/car.jpg" style="filter:invert(39%);">
+<br>
+<br>
+
+<img src="image/car.jpg" style="filter:invert(100%);">
+<br>
+<br>
+
+<!--opacity(%)-->
+<img src="image/car.jpg" style="filter:opacity(80%);">
+<br>
+<br>
+
+<img src="image/car.jpg" style="filter:opacity(20%);">
+<br>
+<br>
+
+<!--saturate(%)-->
+<img src="image/car.jpg" style="filter:saturate(40%);">
+<br>
+<br>
+
+<!--sepia(%)-->
+<img src="image/car.jpg" style="filter:sepia(90%);">
+<br>
+<br>
+
+<!--BOX SIZING-->
+<!--values are content-box(by default), border-box-->
+<!--content-box  the width and height properties include content . border, padding and margin are not include-->
+<!--border-box  the width and height properties include content, border, padding are include but margin not include-->
+
+<div style="background-color:grey; height:100px; width:200px; border:5px solid green; padding:10px;
+			box-sizing:content-box;">
+			BHARGAV SONAGARA </div>
+<br>
+<br>
+
+<div style="background-color:grey; height:100px; width:200px; border:5px solid green; padding:10px;
+			box-sizing:border-box;">
+			BHARGAV SONAGARA </div>		<!--border-box is easy to calculate and i known by seeing inspect an element-->
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+</body>
+</head>
+</html>	

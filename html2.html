@@ -1,0 +1,468 @@
+<html>
+<head>
+<style>
+	p{color:khaki;	/*we can change a color of text*/
+	text-align:center;	/*we can set text allignment */} 
+	h1{color:red;
+	direction:rtl;	/* we can change the direction of text as rtl(right to left) and ltr (left to right) ltr if by default*/}
+	.sb{vertical-align:super;}	/*it allows the vertical positioning of the text. super use as a superscript.*/
+	.sp{vertical-align:sub;}	/*sub use as a subscript*/
+	
+	/*border collapse collapse the border amd make it a sinble line border and the other value is seperate*/
+	a:link{color:red;}
+	a:visited{color:yellow;}
+	a:hover{color:green; background-color:khaki;}
+	a:active{color:black;font-size:40px;}
+</style>
+<body>
+<p>this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+</p>	
+<h1>first heading</h1>
+<h2 style="letter-spacing:30px";>my name is bhargav</h2>	<!--we can give a space betwwen a letter-->
+<h2 style="line-height:50px">my name is bhargav my name is bhargav my name is bhargav<br>	<!-- line-height specifies distance between two lines-->
+my name is bhargav my name is bhargav my name is bhargav<br>
+my name is bhargav my name is bhargav my name is bhargav<br></h2>
+
+<h2 style="text-decoration:underline">my name is bhargav</h2>	<!--text-decoration specifies the decoration of text-->
+<h2 style="text-decoration:line-through">my name is bhargav</h2>
+<h2 style="text-decoration:overline">my name is bhargav</h2>
+
+<h2 style="text-indent:70px;">this is first paragraph this is first paragraph this is first paragraph<br> <!--text-indent specifies indention of first line of text-->
+this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+</h2>
+<h2 style="text-indent:-50px">this is first paragraph this is first paragraph this is first paragraph<br> <!--text-indent specifies indention of negative first line of text-->
+this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+this is first paragraph this is first paragraph this is first paragraph<br>
+</h2>
+
+<!--syntax of shadow=text-shadow:h-shadow v-shadow blur-radius color-->
+<h2 style="text-shadow:5px 8px 4px red;">my name is bhargav</h2> <!--text-shadow allows to give shadow of text-->
+<h2 style="text-shadow:8px 8px 6px blue , 9px 9px 5px pink;">my name is bhargav</h2> <!--we can give double shadow seperated by coma-->
+
+<h2 style="text-transform:uppercase;">my name is BHargaV</h2>	<!--it transform the text-->
+<h2 style="text-transform:lowercase;">MY NAME is bharGAV</h2>
+<h2 style="text-transform:capitalize;">my name is bhargav</h2>
+
+<h2> (a+b)<span class="sb">2</span></h2>	<!--we use internal style sheet in style tag upside-->
+<h2> H<span class="sp">2</span>O</h2>
+
+<!-- we use white-space it specifies how white space inside an html element ia handeled-->
+<h2 style="white-space:nowrap;">hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara.</h2>  
+<!--text will not wrap-->
+
+<h2 style="white-space:wrap;">hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara.</h2>  
+<!--text will wrap and show-->
+
+<h2 style="white-space:pre;">hii,my name is bhargav sonagara.
+							hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. 
+							hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara.</h2>  
+<!--pre is use when we give line break it show on server or we press enter-->
+
+<h2 style="white-space:pre-wrap">hii,my name is bhargav sonagara.
+								hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara.</h2>  
+<!--here text will wrap and pre is also use -->
+
+<h2 style="white-space:pre-line">hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara. hii,my name is bhargav sonagara.</h2>  
+
+<h2 style="word-spacing:20px;">hii, my name is bhargav </h2> <!--word-spacing property increase or decrease the white spacing between the word-->
+
+<h3 style="text-align:justify; text-align-last:right;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+													   hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+													   hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+													   hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav 
+													   hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav	</h3>
+<!--in this text-align-last use when we have to change a allignment of last line and if we use text-align-last we must use justify also-->
+
+<h4 style="width:200px; border:2px solid black;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+									hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+									hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+									hii, my name is bhargav hii, my name is bhargavbhargavbhargavbhargavbhargavbhargavbhargavbhargav
+									hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h4>
+
+<h4 style="width:200px; border:2px solid black; word-wrap:break-word;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+									hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+									hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+									hii, my name is bhargav hii, my name is bhargavbhargavbhargavbhargavbhargavbhargavbhargavbhargav
+									hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h4>
+<!--word-wrap is use when we have to wrap a word-->
+
+<h3 style="border:2px solid black; width:150px; word-break:normal;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+	<!--word-break is use for line breaking rules-->
+
+<h3 style="border:2px solid black; width:150px; word-break:break-all;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+	
+<h3 style="border:2px solid black; width:150px; word-break:keep-all:">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav
+	hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+
+<h3 style="font-family:arial,serif;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>	<!--font-family for the text fonted-->
+<!--if he font-family has more than one word it must be in double quotes-->
+
+<h3 style="font-size:3em;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+
+<h3 style="font-family:arial;font-stretch:condensed;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+
+<h3 style="font-style:italic;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+
+<h3 style="font-variant:small-caps;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--font-variant small-caps convert ino capital but in smaller size-->
+
+<h3 style="font-weight:400;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3><!--it should be in 100 to 900 only-->
+<h3 style="font-weight:bolder;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<h3 style="font-weight:lighter;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+
+<h3 style="font:italic small-caps bold 20px serif;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--we can use as an shorthand font-->
+<!--the order of shorthand font is (font-style font-variant font-weight font-size/line-height font-family)-->
+<!--the font-size and font-family must required-->
+
+<ul style="list-style-image:url('image/car.jpg');">		<!--we can give image for unordered list-->
+	<li>window</li>
+	<li>linux</li>
+	<li>microsoft</li>
+	<li>ios</li>
+</ul>
+
+<ul style="list-style-image:url('image/ca.jpg'); list-style-type:decimal;">	<!--if image is not work we gave an alternate as an list-style-type decimal-->
+	<li>window</li>																<!--priority of list-style-image is greator-->
+	<li>linux</li>
+	<li>microsoft</li>
+	<li>ios</li>
+</ul>
+
+<ul style="list-style-type:hiragana-iroha">	<!--values of list-style-type is (none,disc,circle,square,decimal,decimal-leading-zero,lower-roman,lower-alpha,lower-greek,lower-latin,upper-latin,hebrewetc-->
+	<li>window</li>
+	<li>linux</li>
+	<li>microsoft</li>
+	<li>ios</li>
+</ul>
+
+<ol style="list-style-type:hebrew;">	<!--same as in ordered list-->	
+	<li>window</li>
+	<li>linux</li>
+	<li>microsoft</li>
+	<li>ios</li>
+</ol>
+
+<ul style="list-style-position:inside;">		<!--it by default outside--><!--it work on when we give 2 list a child list give as a inside-->
+	<li>window</li>
+	<li>linux</li>
+	<li>microsoft</li>
+	<li>ios</li>
+</ul>
+
+<ul style="list-style:disc inside;">		<!--we use shorthand as list style--><!--order is (list-style-type, list-style-position,list-style-image)-->
+	<li>window</li>
+	<li>linux</li>
+	<li>microsoft</li>
+	<li>ios</li>
+</ul>
+
+<h3 style="border-style:outset;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--border-style values are none,hidden, dotted,dashed ,solid, double,groove, ridge,inset,outset-->
+
+<h3 style="border-style:dotted double solid dashed;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--we can give more than one value-->
+<!--in this dotted=top, double=right, solid=bottom, dashed=left-->
+
+<h3 style="border-style:dotted solid dashed;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--dotted=top, solid=right left, dashed=bottom-->
+
+<h3 style="border-style:dotted solid;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--dotted=top bottom, solid=right left-->
+
+<h3 style="border-style:solid; border-width:thick;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+
+<h3 style="border-style:solid; border-width:thick thin medium 5px;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--here thick=top, thin=right, medium=bottom, 5px=left-->
+<!--it same as a border style values-->
+
+<h3 style="border-style:solid; border-width:5px; border-color:red green blue grey">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--red=top green=right blue=bottom grey=left-->
+
+<h3 style="border:5px outset khaki;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<!--border is use as a shorthand and the order is (border-width border-style border-color)-->
+
+<table style="border:5px solid red; font-size:30px; ">	
+	<caption style="caption-side:bottom;">student details</caption>	<!--caption is use for a caption and it top is by default-->
+	<th style="border:3px solid blue;">Name</th>
+	<th style="border:3px solid blue;">Roll</th>
+	<th style="border:3px solid blue;">Marks</th>
+	
+	<tr >
+		<td style="border:3px solid blue;">bhargav</td>
+		<td style="border:3px solid blue;">14</td>
+		<td style="border:3px solid blue;">81</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;">divesh</td>
+		<td style="border:3px solid blue;">24</td>
+		<td style="border:3px solid blue;">76</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;">bhavsi</td>
+		<td style="border:3px solid blue;">15</td>
+		<td style="border:3px solid blue;">71</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+
+<table style="border:5px solid red; font-size:30px;border-collapse:collapse; background-color:pink;">	<!--border collapse collapse the border amd make it a single line border and the other value is seperate-->
+	<th style="border:3px solid blue; padding:10px">Name</th>		<!--padding is use to control the space between border and content in a table and this is used in td and th-->
+	<th style="border:3px solid blue;padding:10px">Roll</th>		<!--we can set a background-color also-->
+	<th style="border:3px solid blue;padding:10px">Marks</th>
+	
+	<tr >
+		<td style="border:3px solid blue;padding:10px">bhargav</td>
+		<td style="border:3px solid blue;padding:10px">14</td>
+		<td style="border:3px solid blue;padding:10px">81</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;padding:10px">divesh</td>
+		<td style="border:3px solid blue;padding:10px">24</td>
+		<td style="border:3px solid blue;padding:10px">76</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;padding:10px">bhavsi</td>
+		<td style="border:3px solid blue;padding:10px">15</td>
+		<td style="border:3px solid blue;padding:10px">71</td>
+	</tr>
+</table>
+<br>
+<br>
+
+
+<table style="border:5px solid red; font-size:30px; border-collapse:separate; border-spacing:50px 10px; ">	<!--border-spacing is use to set distance between the border and it apply when border-collapse is seperated-->
+	<th style="border:3px solid blue;">Name</th>				<!--50px=horizontal 10px=vertical-->
+	<th style="border:3px solid blue;">Roll</th>
+	<th style="border:3px solid blue;">Marks</th>
+	
+	<tr >
+		<td style="border:3px solid blue;">bhargav</td>
+		<td style="border:3px solid blue;">14</td>
+		<td style="border:3px solid blue;">81</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;">divesh</td>
+		<td style="border:3px solid blue;">24</td>
+		<td style="border:3px solid blue;">76</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;">bhavsi</td>
+		<td style="border:3px solid blue;">15</td>
+		<td style="border:3px solid blue;">71</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<table style="border:5px solid red; font-size:30px;border-collapse:seperate; empty-cells:hide;table-layout:fixed;width:100% ">	<!--empty-cells is use to hide the background and border if the cell is empty-->
+	<th style="border:3px solid blue; height:70px;">Name</th>			<!--table layout fixed the layout of table value auto is by default-->
+	<th style="border:3px solid blue; height:70px;">Roll</th>			<!--we can set a height and width also -->
+	<th style="border:3px solid blue; height:70px;">Marks</th>
+	
+	<tr >
+		<td style="border:3px solid blue;">bhargav</td>
+		<td style="border:3px solid blue;">14</td>
+		<td style="border:3px solid blue;">81</td>
+	</tr>
+	
+	<tr>
+		<td style="border:3px solid blue;">divesh</td>
+		<td style="border:3px solid blue;"></td>
+		<td style="border:3px solid blue;">76</td>
+	</tr>
+	 
+	<tr>
+		<td style="border:3px solid blue;">bhavsi</td>
+		<td style="border:3px solid blue;">15</td>
+		<td style="border:3px solid blue;"></td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<!--every html tag have a display value and their are of two type 1:block level element  2:inline element -->
+<!--block level element are those who's start from new line and cover a whole width and we can set a height and width   ex <div> <h1> <p>-->
+<!--inline element are those who's not create a new line and not cover whole display width we can't set a height and width   ex: <span> <a> <img>-->
+
+<h3 style="border:1px solid black;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<h3 style="border:1px solid black;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3> 
+
+<a href="#" style="border:1px solid black;">home</a>
+<a href="#" style="border:1px solid black;">about</a><br>
+<br>
+
+
+<h3 style="border:1px solid black; display:inline; width:400px;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<h3 style="border:1px solid black; display:inline; width:700px;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3> 
+<!--when we set a block level element as a inline while using display it work as a inline element as it does'nt create a new line and only take up as much as width is necessary and we can't set a width and height it won't work-->
+
+<a href="#" style="border:1px solid black; display:block; width:400px; background-color:grey;">home</a>
+<a href="#" style="border:1px solid black;display:block; width:500px;background-color:pink;">about</a>
+<!--when we set a inline element as a block using display i work as a block level element as it start from new linw and takes a full width available and we can set a height and width also-->
+<br>
+<br>
+
+
+<h3 style="border:1px solid black; display:inline-block; height:40px; background-color:grey;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<h3 style="border:1px solid black; display:inline-block; height:70px; background-color:pink;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3> 
+<!--when we set a display value as a inline-block it won't start with a new line but we can set a height and width-->
+
+
+<a href="#" style="border:1px solid black;display:none;">home</a>
+<a href="#" style="border:1px solid black; display:none;">about</a>
+<!--when we set a display value as a none it's element will not be display at all-->
+<br>
+<br>
+
+
+<h3 style="border:1px solid black;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<h3 style="border:1px solid black; visibility:hidden;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3>
+<h3 style="border:1px solid black;">hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav hii, my name is bhargav</h3> 
+<!--visibility is use to specify whether or not an element is visible it by default (visible)-->
+<!--when the visibility is hidden   the element is invivisible but not remove it mean the area is occupied by them but it's invisible-->
+<!--or in display value none a text is permanent remove -->
+
+<table style="border:5px solid red; font-size:30px;">	
+	<th style="border:3px solid blue;">Name</th>				
+	<th style="border:3px solid blue;">Roll</th>
+	<th style="border:3px solid blue;">Marks</th>
+	
+	<tr >
+		<td style="border:3px solid blue;">bhargav</td>
+		<td style="border:3px solid blue;">14</td>
+		<td style="border:3px solid blue;">81</td>
+	</tr>
+	
+	<tr style="visibility:collapse	;">	<!--this value is only use for table value-->
+		<td style="border:3px solid blue;">divesh</td>
+		<td style="border:3px solid blue;">24</td>
+		<td style="border:3px solid blue;">76</td>
+	</tr>
+	
+	<tr >
+		<td style="border:3px solid blue;">bhavsi</td>
+		<td style="border:3px solid blue;">15</td>
+		<td style="border:3px solid blue;">71</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+
+<a href="##"> CLICK HERE</a>		<!--in internal style sheet about link-->
+<!--a:link = a normal, unvisited link-->
+<!--a:visited = a link the user has visited-->
+<!--a:hover = a link where user mouse over it-->
+<!--a:active = a link the moment it is clicked-->
+
+<!--order a:hover must come after the a:link and a:visited-->
+<!--a:active must come after a a:hover-->
+<br>
+<br>
+<br>
+<br>
+
+
+    
+<!--now we important property is position-->
+<!--these top bottom left right properties is use to position  an element -->
+<!--we can not use any of the properties without setting up a position properties-->
+
+<!--positon properties have a 4 values 1(static) 2(fixed) 3(relative) 4(absolute)-->
+<!--1(static)= it is by default in position and it is positioned according to the normal flow of the page and left right top bottom won't work-->
+<img src="image/car.jpg" style="position:static; left:100px"></img> <!--the value left property don't work bcz its a static-->
+
+<!--2(fixed)= it always stay in a same place even if the page is scrolled .the top botoom left right is use to positon the element -->
+<h3 style="position:fixed; top:10px; right:50px; font-family:arial; color:blue;">BHARGAV</h3>
+<br>
+<br>
+<br>
+<!--3(relative)= when we set relative position for an element , element position to it normal form ( iss.. ka mtlb hai ki wo position krta hai apne he path mai)-->
+<img src="image/car.jpg" style="position:relative; left:400px; right:500px;"></img> <!--it is move it's in path-->
+
+<div style="background-color:pink; position:fixed; height:100px; width:110px; top:50px; right:50px;">	<!--div create a section-->
+	<h3 style="position:relative; top:50px;">SONAGARA</h3> <!--h3 is a child of div (agr hmne relative ke top ko 50px diya so wo jha.. pehle tha wha se move krega na ki div ke start point se or k ha jaaye ye khood ka flow dekhta hai)-->
+</div>
+
+<!--4(absolute)= element positioned to the nearest positoned ancester.if there is n positioned ancestor then it follow the normal position according to browser-->
+<div style="background-color:grey; position:fixed; height:100px; width:110px; top:150px; right:50px;"><!--absolute follow jb krega tb div ke paas static ke alava koi positioned va;ue ho jese fixed-->
+	<h3 style="position:absolute; top:50px;">bhargav</h3> <!--the absolute always follow the nearest ancestor(div) jb hmne top 50px diya tb wo div se 50px count krega na ki jha... wo pehle tha--> 
+</div>
+<br>
+<br>
+
+<div style="background-color:red; position:fixed; height:200px; width:150px;top:400px; left:10px; z-index:9;"></div>
+<h3 style="position:relative; top:100px; z-index:10; color:blue;">bhargav</h3> <!--when we give relative have a greator priority-->
+<!--z-index property is used set the layer of element. the greator value it will show first-->
+<img src="image/cat.jpg" style="height:200px; width:100px;position:relative; z-index:3;"></img>
+
+<!--overflow property is use to define what happen when content overflow an element boxs. it is use in block level element-->
+<!--there values are visible(default) hidden auto scroll-->
+<h3 style="border:3px solid red; width:300px; height:300px; overflow:hidden;"><!--hidden hide all the element who is outside the box-->
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+</h3>
+	
+<h3 style="border:3px solid red; width:300px; height:300px; overflow:scroll;"><!--scroll give scroll effect on it-->
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+</h3>
+
+<h3 style="border:3px solid red; width:300px; height:300px; overflow:auto;">hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+	hii,my name is bhargav hii, my name is bhargav  hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargav 
+    hii,my name is bhargav hii, my name is bhargav hii,my name is bhargav hii, my name is bhargavhii,my name is bhargav hii, my name is bhargav
+</h3>
+<br>
+<br>
+
+
+
+
+
+</body>
+</head>
+</html>

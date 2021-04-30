@@ -1,0 +1,47 @@
+<html>
+<head>
+	<style>
+		body{background-image:url(image/car.jpg); background-color:grey;	/*we can give both color and image together if image is not shown then color will show on body*/
+			background-repeat:repeat-x;	  /* in this background image repeated horizontaly*/
+			background-repeat:repeat-y;   /* in this background image repeated verticaly*/
+			background-repeat:no-repeat;	/* in this background image repeated once*/
+			background-position:10%20%;	/* we can set a position of background-image as x y coordinates*/
+										/* we can also give position as right top, center top,center left ... etc*/	
+			background-size:cover;	/*scales the background-image as large as possible*/
+			background-size:contain; 	/*it completely cover by the background-image*/
+			/* we can also give size as 100px and 30% */
+			}
+		p{border:5px solid black;
+			padding:40px;
+			background-image:url(image/aa.jpg);
+			background-size:80px;
+			background-repeat:no-repeat;
+		  	background-origin:content-box; /* background image start from content edge*/
+			/* ((background-origin:border-box;)) background image start from border edge*/
+			/*((background-origin:padding-box;)) background-image start from padding edge*/
+			}
+		h1{border:5px dotted white;
+			padding:40px;
+			background-color:khaki;
+			background-clip:border-box;	/*background-clip specify the painting area of the background*/ /*background is painted outside edge of border*/
+			background-clip:padding-box;		/*background is painted outside edge of padding*/
+			background-clip:content-box;		/*background is painted outside edge of content*/}
+		
+		/*if we have to set full background image 
+			((  htm	l{background:url(image/green.jpg) center fixed no-repeat;
+			background-size:cover;}  ))*/
+	
+	
+	
+	</style>
+<body>
+	<h1 style="color:red; font-size:7em; font-style:italic;">hello my name is bhargav</h1>
+	<h2 style="color:red;">second heading</h2>
+	<p style="color:blue;">my first paragraph my first paragraph my first paragraph my first paragraph my first paragraph<br>
+	my first paragraph my first paragraph my first paragraph my first paragraph my first paragraph<br>
+	my first paragraph my first paragraph my first paragraph my first paragraph my first paragraph<br>
+	my first paragraph my first paragraph my first paragraph my first paragraph my first paragraph</p>
+	
+</body>
+</head>
+</html>
